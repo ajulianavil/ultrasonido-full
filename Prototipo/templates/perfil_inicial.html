@@ -1,0 +1,175 @@
+{% extends "barra2.html" %} {% block title %} Perfil inicial {% endblock %}
+{%block content %}
+
+<script
+  src="https://kit.fontawesome.com/5bdb3c603b.js"
+  crossorigin="anonymous"
+></script>
+<style>
+  #columna1 {
+    position: absolute;
+    height: 480px;
+    width: 550px;
+    margin-top: 10px;
+  }
+  #columna2 {
+    margin-left: 600px;
+    margin-right: 20px;
+    margin-top: 10px;
+    height: 480px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f0f7;
+  }
+
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 70%;
+    padding: 0 20px;
+  }
+
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {
+    margin: 0 -5px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: left;
+    background-color: #ffffff;
+    border-radius: 5px;
+  }
+
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  /* ---------------- columna 2 ---------- */
+
+  /* Float four columns side by side */
+  .column1 {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+
+  /* Remove extra left and right margins, due to padding in columns */
+  .row1 {
+    margin: 0 -5px;
+  }
+
+  /* Clear floats after the columns */
+  .row1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Style the counter cards */
+  .card1 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 5%;
+    height: 120px;
+  }
+
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+    .column1 {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  .button {
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    
+  }
+</style>
+
+<div id="columna1">
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        Buen día
+        <p style="color: #0796d8">Doctor Becerra</p>
+        Have a nice day at work
+      </div>
+      <div style="margin-top: 80px">
+        <b>Agregar nuevo caso</b>
+        <i
+          class="fa-solid fa-square-plus"
+          style="color: #0796d8; cursor: pointer"
+        ></i>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="columna2">
+  <h2><b>Ver reportes</b></h2>
+  <br /><br /><br /><br />
+  <b>Reporte mensual</b><br /><br />
+
+  <div class="row1">
+    <div class="column1">
+      <div class="card1">
+        <i class="fa-solid fa-person" style="color: #0796d8"></i><br />
+        <p>Total pacientes</p>
+        <p>59</p>
+      </div>
+    </div>
+    <div class="column1">
+      <div class="card1">Fetos sanos</div>
+    </div>
+    <div class="column1">
+      <div class="card1">Fetos en seguimiento</div>
+      <br /><br /><br />
+    </div>
+  </div>
+  <button
+    class="button button2"
+    type="button"
+    style="background-color: #338608;margin-left: 150px;"
+  >
+    Ver analisis completo</button
+  ><br />
+  <h3><b style="margin-left: 175px;">Otras consultas</b></h3>
+  
+  <button class="button button2" style="background-color: #0796d8;margin-left: 160px;">
+    Ir a otro repositorio
+  </button>
+</div>
+{% endblock %}

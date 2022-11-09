@@ -1,0 +1,101 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock %}</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{%static 'css/estilos.css'%}"
+    />
+  </head>
+  <script
+    src="https://kit.fontawesome.com/5bdb3c603b.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <body id="body" >
+    <header>
+      <div class="icon_menu">
+        <i class="fas fa-bars" id="boton_open"></i>
+      </div>
+      <div class="icon_menu">
+       
+      </div>
+    </header>
+
+    <div class="menu__side" id="menu_side">
+      <div class="name__page">
+        <i class="fa-solid fa-stethoscope"></i>
+        <h4>Ultrasonido</h4>
+      </div>
+      <div class="options__menu">
+        <a href="#" class="selected">
+          <div class="option">
+            <i class="fas fa-home" title="inicio"></i>
+            <h4>Inicio</h4>
+          </div>
+        </a>
+        <a href="#">
+          <div class="option">
+            <i class="fa-solid fa-plus" title="Agregar nuevo caso"></i>
+            <h4>Agregar nuevo caso</h4>
+          </div>
+        </a>
+        <a href="#">
+          <div class="option">
+            <i class="fa-solid fa-user" title="perfil"></i>
+            <h4>Ver perfil</h4>
+          </div>
+        </a>
+        <a href="#">
+          <div class="option">
+            <i class="fa-solid fa-book" title="Manual de uso"></i>
+            <h4>Manual de uso</h4>
+          </div>
+        </a>
+        <a href="#">
+          <div class="option">
+            <i class="fa-solid fa-circle-info" title="Soporte técnico"></i>
+            <h4>Soporte técnico</h4>
+          </div>
+        </a>
+        <a href="#">
+          <div class="option">
+            <i class="fa-solid fa-magnifying-glass" title="Buscar registro"></i>
+            <h4>Buscar registro</h4>
+          </div>
+        </a>
+        <a href="#">
+          <div class="option">
+            <i class="fa-solid fa-book" title="repositorio"></i>
+            <h4>Ir al repositorio</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!--  <main>
+      <h1>Titulo</h1>
+      <br />
+      <p>
+        
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
+        tempore enim. Magnam nemo earum vitae deleniti suscipit, cumque quam
+        ipsam placeat nostrum maiores quis soluta recusandae consequuntur,
+        consectetur, fugit ea!
+
+  
+      </p> 
+    </main> -->
+    <main>
+
+        {% block content %} {% endblock %}
+      </p> 
+    </main>
+    <script src="{%static 'script.js'%}"></script>
+  </body>
+</html>
